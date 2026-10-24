@@ -36,6 +36,8 @@ Use this template for writing the PR body:
 
 Skip all preambles and keep prose brief. Use the user's domain language from `GLOSSARY.md`.
 
+Reference an issue or PR in another repository as `owner/repo#N`. A bare `#N` links to the PR's own repo, so it points at the wrong issue from anywhere else.
+
 ### Summary
 
 Pick the smallest view that makes the key point clear.
@@ -159,6 +161,8 @@ You may use one of these, you may use several, it is unlikely you will use all o
 
 Concrete evidence that the change works. Show a before and after.
 
+Before publishing proof, redact credentials, private data, and unrelated browser content. Keep artifacts accessible to the intended reviewers throughout review and any QA.
+
 Screenshots are S-tier - when the environment is set up for it and the change is visual.
 
 Execution-based evidence is A-tier. Test results, console output. Show the exact test that now fails and passes, using pseudocode.
@@ -168,3 +172,7 @@ Execution-based evidence is A-tier. Test results, console output. Show the exact
 Describe whether it's a one-way or two-way door. You can walk back through two-way doors, but not one-way doors. A PR that is cheap to roll back is lower risk. Changes that involve destructive actions or hard-to-reverse decisions are one-way doors.
 
 The blast radius is the potential impact or scope of the changes introduced by this PR. Consider all possibilities. Examples are layout shift, breakages for consumers, mobile responsiveness, etc.
+
+## Updating an existing PR
+
+Read the latest rendered body and edit only the relevant sections, preserving unrelated manual content. After a concurrent edit or interrupted update, reread and reconcile before writing. Read back the rendered result to confirm the intended changes and preserved content.
